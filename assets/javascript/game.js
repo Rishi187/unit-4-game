@@ -2,7 +2,7 @@ var wins = 0;
 var losses = 0;
 var totalScore=0;
 // Here we establish the "tarcgdetNumber" (set to 50 in this example).
-var targetNumber = 53;
+var targetNumber = Math.floor(Math.random() * 48) + 2;
 
 // Here we set the "number-to-guess" header to match the "targetNumber".
 // Eventually this will allow us to change the HTML to match the value in the JavaScript.
@@ -19,34 +19,23 @@ var counter = 0;
 for (var i = 0; i < numberOptions.length; i++) {
 // For each iteration, we will create an imageCrystal
     var imageCrystal = $("<img>");
-    var imageCrystal1 = $("<img>");
-    var imageCrystal2 = $("<img>");
-    var imageCrystal3 = $("<img>");
 
 // First each crystal will be given the class ".crystal-image".
 // This will allow the CSS to take effect.
     imageCrystal.addClass("crystal-image");
-    imageCrystal1.addClass("crystal-image");
-    imageCrystal2.addClass("crystal-image");
-    imageCrystal3.addClass("crystal-image");
-    // Each imageCrystal will be given a src link to the crystal image
-    imageCrystal.attr("src", "http://www.crystalinks.com/librarycrystal.jpg");
-    imageCrystal1.attr("src", "http://www.crystalclearintentions.co.nz/wp-content/uploads/crystals.jpg");
-    imageCrystal2.attr("src", "https://cdn.shopify.com/s/files/1/0912/7764/articles/blue-crystals-vector-clipart.png?v=1518408542");
-    imageCrystal3.attr("src", "https://cdn.shopify.com/s/files/1/0912/7764/files/safe_image_1_dfd63a86-36a6-4376-98c2-fc4f62258150_1024x1024.jpg?v=1487900248");
+    imageCrystal.attr('id', i);
+    
     // Each imageCrystal will be given a data attribute called data-crystalValue.
     // This data attribute will be set equal to the array value.
     imageCrystal.attr("data-crystalvalue", numberOptions[i]);
-    imageCrystal1.attr("data-crystalvalue", numberOptions[i]);
-    imageCrystal2.attr("data-crystalvalue", numberOptions[i]);
-    imageCrystal3.attr("data-crystalvalue", numberOptions[i]);
     // Lastly, each crystal image (with all it classes and attributes) will get added to the page.
     $("#crystals").append(imageCrystal);
-    $("#crystals").append(imageCrystal1);
-    $("#crystals").append(imageCrystal2);
-    $("#crystals").append(imageCrystal3); 
 }     
 
+$("#0").attr("src", "http://www.crystalinks.com/librarycrystal.jpg");
+$("#1").attr("src", "http://www.crystalclearintentions.co.nz/wp-content/uploads/crystals.jpg");
+$("#2").attr("src", "https://cdn.shopify.com/s/files/1/0912/7764/articles/blue-crystals-vector-clipart.png?v=1518408542");
+$("#3").attr("src", "https://cdn.shopify.com/s/files/1/0912/7764/files/safe_image_1_dfd63a86-36a6-4376-98c2-fc4f62258150_1024x1024.jpg?v=1487900248");
 
 // This time, our click event applies to every single crystal on the page. Not just one.
 $(".crystal-image").on("click", function() {
@@ -100,6 +89,5 @@ resetGame();
     var html =
     "<p>Total Score: " + counter + "</p>";
 
-    document.querySelector("#crystalGame").innerHTML = html;
     
 });
