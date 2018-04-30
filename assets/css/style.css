@@ -1,0 +1,25 @@
+.crystal-image {
+    width: 100px;
+    height: 100px;
+}
+  body {
+    padding: 0;
+    margin: 0;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 18px;
+    line-height: 150%;
+    color: #333;
+    background: #ccc;
+  }
+header {
+  color: blue;
+  background-color: black;
+  
+}
+.container {
+  width: 1024px;
+  margin: 0 auto;
+}
+
+
+

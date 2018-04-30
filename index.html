@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+  <title>simple crystal game</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</head>
+<body>
+    <header>
+        <!-- h1: The most important headline -->
+        <h1 class="text-center">Crystal Collectors</h1>
+      </header>
+  <div id="crystalGame">
+    <div class="jumbotron">
+        
+        <h4 class="text-center"></h4>You will be given a random number at the start of the game. There are four crystals below. By checking on a crystal you will add a specific amount of points to your total score. You will add a specific amount of points to your total score. You win the game by matching your total score to the random number. You lose the game if your total scoore goes above theh random number. The value of each crystal is hidden from you until you click on it. Each time when the game starts, the game will change the values ofj each crystal. </h4>
+      </div>
+ </div>
+      <div class="col-md-4">
+        <div class="numbers-guess">
+<!-- Here we added a header which will hold the "number-to-guess" -->
+        <h2>Number to Guess: <span id="number-to-guess"></span></h2>
+        </div>
+      </div>
+    <div class="col-md-4">
+          <div class="win-loss">
+            <p>Win:<span id="wins">0</span></p>
+            <p>Losses:<span id="losses">0</span></p>
+            <!-- <p>Total Score:<span id="total Score">0</span></p> -->
+
+         </div>
+    </div>
+<!-- We then wrapped our crystal image in an id "#crystals" -->
+    <div class="col-md-12"> 
+        <div id="crystals">
+       </div>
+    </div>
+
+<!-- Here we added in a single crystal image --><!-- We gave our crystal image the class ".crystal-image" to apply the resize-->
+
+<script type="text/javascript" src="assets/javascript/game.js"></script>
+
+
+</body>
+</html>
